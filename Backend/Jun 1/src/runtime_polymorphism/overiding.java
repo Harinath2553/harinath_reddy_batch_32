@@ -3,6 +3,6 @@ package runtime_polymorphism;
 public class overiding {
 
 	public void test() {
-		System.out.println("Harry");
+		System.out.println("Hari");
 	}
 }
