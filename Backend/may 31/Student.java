@@ -9,7 +9,7 @@ class Student
     Name=name;
   }
   public static void main(String[] args) {
-    setName("Arya Vishnu");
+    setName("Harinath");
     getName();
   }
 }
