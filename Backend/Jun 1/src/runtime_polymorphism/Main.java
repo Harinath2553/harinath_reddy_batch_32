@@ -4,7 +4,7 @@ public class Main extends overiding{
 	
 	@Override
 	public void test() {
-		System.out.println("Arya Vishnu");
+		System.out.println("Harinath");
 	}
 
 
