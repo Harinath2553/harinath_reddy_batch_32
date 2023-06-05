@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Bio</title>
+<style>
+
+
+th{
+	text-align: left;
+
+}
+h1{
+color:green;
+text-align:center;
+font-size: 40px;
+background-color: darkred;
+}
+table{
+	color:green;
+	font-size: 30px;
+	background-color: darkred;
+}
+div {
+border: 2px solid red;
+border-radius: 5px;
+background-color: blue;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<div>
+	<h1> Bio</h1>
+	<table>
+		<tr>
+			<th>Name:-</th>
+			<td>Arya Vishnu</td>
+
+		</tr>
+		<tr>
+			<th>Degree:-</th>
+			<td>Masters in Science</td>
+
+		</tr>
+		<tr>
+			<th>College:-</th>
+			<td>NYU</td>
+
+		</tr>
+		<tr>
+			<th>Undergrad:-</th>
+			<td>RMK</td>
+
+		</tr>
+
+		<tr>
+			<th>Skills:-</th>
+			<td>
+				<ul style="list-style-type:disc">
+  				<li>Python</li>
+  				<li>Java</li>
+  				<li>Aws</li>
+				</ul>
+
+			</td>
+		</tr>
+	</table>
+	</div>
+	<p id="out"> </p>
+	<script>
+	let data= {
+		firstName:"Arya Vishnu", lastName:"Thotakura", age:23, eyeColor:"black",height:6,address:"531 83 street",hobbies:{sports:["Cricket","tennis"],reading:"books"},skills:["java","python"],image:"/Users/aryavishnu/Downloads/5FC855F0-776C-4851-B15E-BB30785E28FF.png",gender:"Male"
+	}
+	console.log(data);
+	function displayImage(width, height) {
+	 var img = document.createElement("img");
+	 img.src = data.image;
+	 img.width = width;
+	 img.height = height;
+	 img.style.borderRadius='50%'
+	 document.body.appendChild(img);
+	}
+
+
+	displayImage(250,250);
+	document.getElementById("out").innerHTML=data.firstName+" "+data.lastName;
+	</script>
+
+</body>
+
+</html>

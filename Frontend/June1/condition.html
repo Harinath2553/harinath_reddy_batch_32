@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p id="out"> </p>
+  <p id="out1"> </p>
+<script>
+let environment ="DEV";
+let sendamount=110;
+if (sendamount<100){
+  console.log(sendamount);
+}
+else if (environment==="DEV"){
+  sendamount=sendamount+(sendamount*0.10);
+  console.log(sendamount);
+}
+else if (environment==="TEST") {
+  sendamount=sendamount+(sendamount*0.20);
+  console.log(sendamount);
+}
+else if (environment==="STAGE") {
+  sendamount=sendamount+(sendamount*0.30);
+  console.log(sendamount);
+}
+else if (environment==="PROD") {
+  sendamount=sendamount+(sendamount*0.05);
+  console.log(sendamount);
+}
+else  {
+  console.log('Enter Valied environment');
+}
+
+document.getElementById("out").innerHTML="The chosen env is "+environment+" and the final amount is "+sendamount;
+let environments ="DEV";
+let sendamounts=100;
+switch (environments) {
+  case "DEV":
+    sendamounts=sendamounts+(sendamounts*0.10);
+    console.log(sendamounts);
+    break;
+  case "TEST":
+    sendamounts=sendamounts+(sendamounts*0.20);
+    console.log(sendamounts);
+    break;
+  case "STAGE":
+    sendamounts=sendamounts+(sendamounts*0.30);
+    console.log(sendamounts);
+    break;
+  case "PROD":
+    sendamounts=sendamounts+(sendamounts*0.5);
+    console.log(sendamounts);
+    break
+
+  default:
+    console.log('Enter Valied environment');
+
+}
+document.getElementById("out1").innerHTML="The chosen env is "+environments+" and the final amount is "+sendamounts;
+</script>
+</body>
+</html>
