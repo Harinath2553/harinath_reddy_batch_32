@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h1> My Info<h1>
+<label>FirstName: </label>
+<input type="text" id="FirstName"/> </input>
+<br>
+<br>
+<label>LastName: </label>
+<input type="text" id="LastName"/> </input>
+<br>
+<br>
+<label>DOB: </label>
+<input type="date" id="DOB"/> </input>
+<br>
+<br>
+<label>Email: </label>
+<input type="text" id="Email"/> </input>
+<br>
+<br>
+<label>PhoneNo: </label>
+<input type="text" id="PhoneNo"/> </input>
+<br>
+<br>
+<label>Tech </label>
+<input type="text" id="Tech"/> </input>
+<h4>Hobbies<h4>
+<input type="checkbox" value="Cricket" name="hobby">
+<label>Cricket</label>
+<br>
+<br>
+<input type="checkbox" value="Tennis" name="hobby">
+<label>Tennis</label>
+<br>
+<br>
+<input type="checkbox" value="Coding" name="hobby">
+<label>Coding</label>
+</form>
+<br>
+<button type="button" onclick="myFunction()">Submit</button>
+<p id="demo"></p>
+
+<script>
+
+function myFunction() {
+				var elements = document.getElementsByTagName("input")
+				let s="";
+for (var i = 0; i < elements.length-3; i++) {
+    s+=elements[i].value+"<br>";
+}
+var ele = document.getElementsByName("hobby");
+for (i = 0; i < ele.length; i++) {
+            if (ele[i].checked){
+                s+=ele[i].value+"<br>";
+}
+}
+
+
+document.getElementById("demo").innerHTML = s;
+
+    }
+</script>
+</body>
+</html>
